@@ -14,7 +14,7 @@ class RecipeCard extends HTMLElement {
     // A3. TODO - Create a style element - This will hold all of the styles for the Web Component
     const styleElement = document.createElement('style');
     // A4. TODO - Insert all of the styles from cardTemplate.html into the <style> element you just made
-    fetch('/reference/cardTemplate.html')
+    fetch('reference/cardTemplate.html')
       .then(response => response.text())
       .then(htmlText => {
         const cssStart = htmlText.indexOf('<style>');
@@ -69,7 +69,7 @@ class RecipeCard extends HTMLElement {
         <p class="organization">${data.organization}</p>
         <div class="rating">
           <span>${data.rating}</span>
-          <img src="/assets/images/icons/${data.rating}-star.svg" alt="${data.rating} stars">
+          <img src="assets/images/icons/${data.rating}-star.svg" alt="${data.rating} stars">
           <span>(${data.numRatings})</span>
         </div>
         <time>${data.lengthTime}</time>
